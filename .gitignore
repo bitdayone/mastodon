@@ -13,6 +13,7 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
+.eslintcache
 /log/*
 !/log/.keep
 /tmp
@@ -23,6 +24,7 @@ public/packs
 public/packs-test
 .env
 .env.production
+.env.development
 node_modules/
 build/
 
@@ -41,6 +43,11 @@ postgres
 redis
 elasticsearch
 
+# ignore Helm lockfile, dependency charts, and local values file
+chart/Chart.lock
+chart/charts/*.tgz
+chart/values.yaml
+
 # Ignore Apple files
 .DS_Store
 
@@ -55,6 +62,8 @@ npm-debug.log
 yarn-error.log
 yarn-debug.log
 
+# Ignore vagrant log files
+*-cloudimg-console.log
+
 # Ignore Docker option files
 docker-compose.override.yml
-
